@@ -58,7 +58,7 @@
         base._search(search);
       });
       $(document).on("click.bootstrap-chooser", function (e) {
-        if (base.$el.is($(e.target).closest('.bootstrap-chooser'))) {} else {
+        if (!base.$el.is($(e.target).closest('.bootstrap-chooser'))) {
           base._closeDropdown();
         }
       });
@@ -226,7 +226,7 @@
       var $this = $(this);
       var data = $this.data("plugins.bootstrap-chooser");
       var options = typeof option === "object" && option;
-      if (!data && option == "destroy") {
+      if (!data && option === "destroy") {
         return;
       } else if (!data) {
         $this.data("plugins.bootstrap-chooser", new $.chooser(this, options));
