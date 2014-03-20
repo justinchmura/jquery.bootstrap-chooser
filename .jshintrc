@@ -5,7 +5,9 @@
     "requirejs": true,
     "require": true,
     "window": true,
-    "document": true
+    "document": true,
+    "console": true,
+    "jQuery": true
   },
   "browser": true,
   "bitwise": true,
