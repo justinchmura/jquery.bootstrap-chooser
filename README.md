@@ -1,9 +1,5 @@
 # jQuery Bootstrap Token Chooser Plugin
 
-## Demo & Examples
-
-[http://justinchmura.com/blog/](http://justinchmura.com/blog/)
-
 ## Example Usage
 
 ### HTML
