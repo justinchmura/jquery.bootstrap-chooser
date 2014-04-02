@@ -1,4 +1,4 @@
-# jQuery Bootstrap Token Chooser Plugin
+# jQuery Bootstrap Token Chooser
 
 ## Example Usage
 
