@@ -8,7 +8,7 @@ var uglify = require('gulp-uglify');
 var cssmin = require('gulp-cssmin');
 var rename = require('gulp-rename');
 var header = require('gulp-header');
-var qunit = require('node-qunit-phantomjs');
+var qunit = require('gulp-qunit');
 
 var pkg = require('./package.json');
 var scripts = ['./*.js'];
@@ -51,7 +51,7 @@ gulp.task('cssmin', function () {
 });
 
 gulp.task('test', ['jslint', 'csslint'], function () {
-  return qunit('./test/test-runner.html');
+  return gulp.src('./test/index.html').pipe(qunit());
 });
 
 gulp.task('build', ['jsmin', 'cssmin']);
