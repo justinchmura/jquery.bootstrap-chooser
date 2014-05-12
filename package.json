@@ -15,5 +15,11 @@
   },
   "author": "Justin Chmura",
   "license": "MIT",
-  "readmeFilename": "README.md"
+  "readmeFilename": "README.md",
+  "devDependencies": {
+    "gulp": "^3.6.2",
+    "gulp-jshint": "^1.5.5",
+    "gulp-util": "^2.2.14",
+    "jshint-stylish": "^0.2.0"
+  }
 }
