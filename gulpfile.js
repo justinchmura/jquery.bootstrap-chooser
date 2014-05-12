@@ -8,7 +8,7 @@ var uglify = require('gulp-uglify');
 var cssmin = require('gulp-cssmin');
 var rename = require('gulp-rename');
 var header = require('gulp-header');
-var qunit = require('gulp-qunit');
+var qunit = require('node-qunit-phantomjs');
 
 var pkg = require('./package.json');
 var scripts = ['./*.js'];
@@ -24,14 +24,14 @@ var banner = ['/**',
 ''].join('\n');
 
 gulp.task('jslint', function () {
-  gulp.src(scripts)
+  return gulp.src(scripts)
     .pipe(jshint())
     .pipe(jshint.reporter('jshint-stylish'))
     .pipe(jshint.reporter('fail'));
 });
 
 gulp.task('jsmin', ['jslint'], function () {
-  gulp.src(['jquery.bootstrap-chooser.js'])
+  return gulp.src(['jquery.bootstrap-chooser.js'])
     .pipe(rename({ suffix: '.min' }))
     .pipe(uglify())
     .pipe(header(banner, { pkg: pkg }))
@@ -39,22 +39,20 @@ gulp.task('jsmin', ['jslint'], function () {
 });
 
 gulp.task('csslint', function () {
-  gulp.src(css).pipe(csslint());
+  return gulp.src(css).pipe(csslint());
 });
 
 gulp.task('cssmin', function () {
-  gulp.src(['jquery.bootstrap-chooser.css'])
+  return gulp.src(['jquery.bootstrap-chooser.css'])
     .pipe(rename({ suffix: '.min' }))
     .pipe(cssmin())
     .pipe(header(banner, { pkg: pkg }))
     .pipe(gulp.dest(build));
 });
 
-gulp.task('build', ['jsmin', 'cssmin'], function () {
-  
+gulp.task('test', ['jslint', 'csslint', function () {
+  return qunit('./test/test-runner.html');
 });
 
-gulp.task('test', function () {
-});
-
-gulp.task('default', ['jslint', 'csslint', 'test']);
+gulp.task('build', ['jsmin', 'cssmin']);
+gulp.task('default', ['test']);
