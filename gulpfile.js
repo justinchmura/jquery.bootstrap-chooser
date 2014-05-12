@@ -50,7 +50,7 @@ gulp.task('cssmin', function () {
     .pipe(gulp.dest(build));
 });
 
-gulp.task('test', ['jslint', 'csslint', function () {
+gulp.task('test', ['jslint', 'csslint'], function () {
   return qunit('./test/test-runner.html');
 });
 
