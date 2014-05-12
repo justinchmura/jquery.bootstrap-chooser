@@ -1,0 +1,19 @@
+{
+  "name": "jquery.bootstrap-chooser",
+  "version": "0.0.1",
+  "description": "A multiple token selector using Bootstrap styling.",
+  "main": "jquery.bootstrap-chooser.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/justinchmura/jquery.bootstrap-chooser.git"
+  },
+  "author": "Justin Chmura",
+  "license": "MIT",
+  "readmeFilename": "README.md"
+}
