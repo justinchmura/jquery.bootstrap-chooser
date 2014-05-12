@@ -54,5 +54,11 @@ gulp.task('test', ['jslint', 'csslint'], function () {
   return gulp.src('./test/index.html').pipe(qunit());
 });
 
+gulp.task('watch', function () {
+  gulp.watch(scripts, ['jslint']);
+  gulp.watch(css, ['csslint']);
+  gulp.watch(['./test/*.js', './test/*.html'], ['test']);
+});
+
 gulp.task('build', ['jsmin', 'cssmin']);
 gulp.task('default', ['test']);
