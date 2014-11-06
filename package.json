@@ -1,6 +1,6 @@
 {
   "name": "jquery.bootstrap-chooser",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A multiple token selector using Bootstrap styling.",
   "homepage": "https://github.com/justinchmura/jquery.bootstrap-chooser",
   "main": "jquery.bootstrap-chooser.js",

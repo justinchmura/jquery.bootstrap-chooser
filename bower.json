@@ -1,7 +1,7 @@
 {
   "name": "jquery.bootstrap-chooser",
   "main": "jquery.bootstrap-chooser.js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "homepage": "https://github.com/justinchmura/jquery.bootstrap-chooser",
   "authors": [
     "Justin Chmura <justin.chmura@gmail.com>"
