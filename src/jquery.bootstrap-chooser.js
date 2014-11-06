@@ -223,8 +223,9 @@
   };
 
   $.fn.chooser = function (option) {
+    var results;
     var args = Array.prototype.slice.call(arguments, 0);
-    return this.each(function () {
+    var setup = this.each(function () {
       var $this = $(this);
       var data = $this.data('plugins.bootstrap-chooser');
       var options = typeof option === 'object' && option;
@@ -234,8 +235,13 @@
         $this.data('plugins.bootstrap-chooser', new $.chooser(this, options));
       } else if (typeof option === 'string') {
         args.splice(0, 1);
-        return data.public[option].apply(data, args);
+        results = data.public[option].apply(data, args);
       }
     });
+    if (typeof option === 'string') {
+      return results;
+    } else {
+      return setup;
+    }
   };
 })(window.jQuery);
