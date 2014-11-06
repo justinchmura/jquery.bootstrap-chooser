@@ -34,6 +34,14 @@ $('#chooser').chooser({
 | `max` | `number` | `optional` | `null` | Maximum number of selections allowed |
 | `select` | `function` | `optional` | `null` | Callback invoked after a selection is made |
 
+### Methods
+
+| Name | Args | Returns | Description |
+| ---- | ---- | ------- | ----------- |
+| `$().chooser('destroy')` | `none` | `undefined` | Destroys the plugin. Removes all references. |
+| `$().chooser('selections')` | `none` | `array of selected strings` | Get the current list of selected tokens |
+| `$().chooser('update', [])` | `array of strings` | `undefined` | Update the data list with a new list. Does clear the selected tokens. |
+
 ### CSS
 
 All the CSS that is needed is provided in the stylesheet. Copy to wherever you need it.
