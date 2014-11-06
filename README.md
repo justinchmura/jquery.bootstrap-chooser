@@ -26,7 +26,13 @@ $('#chooser').chooser({
 
 ### Options
 
-In progress
+| 
+| --------------|--------|----------|-------------|---------------------------------------|
+| `placeholder` | string | optional | 'Choose...' | Placeholder text to show in the input |
+| `labelClass` | string | optional | 'info' | Bootstrap label CSS class to apply to the tokens inside the input |
+| `data` | array | required | [] | Array of string tokens to be the options |
+| `max` | number | optional | null | Maximum number of selections allowed |
+| `select` | function | optional | null | Callback invoked after a selection is made |
 
 ### CSS
 
@@ -39,6 +45,7 @@ Reference the script file and the CSS stylesheet. Requires jQuery and Bootstrap.
 ## TODO
 
 * Add meaningful tests
+* Create Bower package
 
 ## License
 
