@@ -1,5 +1,11 @@
 # jQuery Bootstrap Token Chooser
 
+![jQuery Bootstrap Token Chooser](http://justinchmura.com/wp-content/uploads/2014/06/jquery-bootstrap-token-chooser.png)
+
+## Dependencies
+
+Currently, this plugin is built on top of [jQuery 1.11/2](http://jquery.com/) and uses [Twitter Bootstrap 3](http://getbootstrap.com/).
+
 ## Example Usage
 
 ### HTML
@@ -30,9 +36,9 @@ All the CSS that is needed is provided in the stylesheet. Copy to wherever you n
 
 Reference the script file and the CSS stylesheet. Requires jQuery and Bootstrap. Bower installation coming soon.
 
-## Notes
+## TODO
 
-In progress
+* Add meaningful tests
 
 ## License
 
