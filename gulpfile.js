@@ -11,9 +11,9 @@ var header = require('gulp-header');
 var qunit = require('gulp-qunit');
 
 var pkg = require('./package.json');
-var scripts = ['./*.js'];
-var css = ['./*.css'];
-var build = './build';
+var scripts = ['./src/*.js'];
+var css = ['./src/*.css'];
+var build = './dist';
 
 var banner = ['/**',
   ' * <%= pkg.name %> - <%= pkg.description %>',
@@ -31,7 +31,7 @@ gulp.task('jslint', function () {
 });
 
 gulp.task('jsmin', ['jslint'], function () {
-  return gulp.src(['jquery.bootstrap-chooser.js'])
+  return gulp.src(['./src/jquery.bootstrap-chooser.js'])
     .pipe(rename({ suffix: '.min' }))
     .pipe(uglify())
     .pipe(header(banner, { pkg: pkg }))
@@ -43,7 +43,7 @@ gulp.task('csslint', function () {
 });
 
 gulp.task('cssmin', function () {
-  return gulp.src(['jquery.bootstrap-chooser.css'])
+  return gulp.src(['./src/jquery.bootstrap-chooser.css'])
     .pipe(rename({ suffix: '.min' }))
     .pipe(cssmin())
     .pipe(header(banner, { pkg: pkg }))
